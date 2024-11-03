@@ -27,7 +27,7 @@
   <title>Hindsight Planner</title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+ 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -117,6 +117,8 @@
   <h2 class="title is-3">Method illustration</h2>
   <div class="hero-body">
         <img src="static/images/process.png" alt="MY ALT TEXT"/>
+ 
+
         <h2 class="subtitle has-text-centered">
           An illustration of our method.
           
@@ -145,8 +147,8 @@
       <h2 class="title is-3">Video Demo</h2>
       <!-- 新增的容器用于放置两张图片 -->
       <div class="image-wrapper">
-        <img src="static/videos/demo1.gif" alt="demo1" class="hero-image">
-        <img src="static/images/image.png" alt="demo2" class="hero-image">
+        <img src="static/videos/demo1.gif" alt="demo1" class=".hero-image:last-child">
+        <img src="static/images/image1.png" alt="demo2" class=".hero-image:last-child">
       </div>
       <h2 class="subtitle has-text-centered">
         Place a plate with a ladle on it in a cabinet.
@@ -167,6 +169,14 @@
       margin-top: 20px; /* 根据需要调整上边距 */
     }
     .hero-image {
-      max-width: 49%; /* 图片最大宽度为容器宽度的49%，留出间隙 */
-      height: auto; /* 图片高度自适应 */
+  max-width: 100%; /* 默认图片最大宽度为容器宽度的100% */
+  height: auto; /* 图片高度自适应 */
+    }
+    .hero-body {
+  text-align: center; /* 水平居中 */
+}
+  /* 特定选择器，用于选择最后一张图片 */
+    .hero-image:last-child {
+      max-width: 49%; /* 最后一张图片最大宽度为容器宽度的49% */
+  
     }
