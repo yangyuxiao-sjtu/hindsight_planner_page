@@ -67,7 +67,15 @@
                   </div>
 
 
-
+                  <span class="link-block">
+                    <a href="static/pdfs/hindsight_planner.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>paper</span>
+                  </a>
+                </span>
                   <!-- Github link -->
                   <span class="link-block">
                     <a href="https://github.com/yangyuxiao-sjtu/LLM_agent" target="_blank"
@@ -114,15 +122,14 @@
 
 <!-- Image carousel -->
 <section class="hero is-small">
-  <h2 class="title is-3">Method illustration</h2>
-  <div class="hero-body">
-        <img src="static/images/process.png" alt="MY ALT TEXT"/>
- 
-
-        <h2 class="subtitle has-text-centered">
-          An illustration of our method.
-          
+  <div class="hero-body has-text-centered">
+    <h2 class="title is-3">Method illustration</h2>
+    <img src="static/images/process.png" alt="MY ALT TEXT"/>
+    <h2 class="subtitle">
+      An illustration of our method.
+    </h2>
   </div>
+</section>
   <p>
     At time step \( t \), the planner receives an observed object list \(y_t\) from observation functions. We then apply the Adaptation module to predict the latent PDDL arguments \( P \) based on \( y_t \). The whole state \( x_t \) is constructed by \( y_t \) and \( P \). With \( x_t \), we invoke the actor-critic task planner to generate a future trajectory over a long horizon and return the sub-goal \( S_k \). To ensure the output from the planner meets the requirements, a frozen BERT is used to map the output to the legal space. The proposed sub-goal will be executed by a low-level controller. When a sub-goal is completed or fails, the planner reinvokes the reasoning process to replan another future trajectory from the new state.  <p>
 </div>
